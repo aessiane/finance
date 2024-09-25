@@ -41,22 +41,17 @@ def analytics_html():
     # Use https://statcounter.com/ to understand which of the calculators are being
     # used, and therefore worthy of further attention.
     html = (
-        '<script type="text/javascript">'
-        'var sc_project=13036387; '
-        'var sc_invisible=1; '
-        'var sc_security="3699fd22"; '
-        '</script>'
-        '<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>'
-        '<noscript>'
-        '<div class="statcounter">'
-        '<a title="Statcounter" href="https://statcounter.com/" target="_blank">'
-        '<img class="statcounter" src="https://c.statcounter.com/13036387/0/3699fd22/1/" alt="Statcounter" referrerPolicy="no-referrer-when-downgrade">'
-        '</a>'
-        '</div>'
-        '</noscript>'
-        if int(os.environ.get('PRODUCTION', '0')) else
-        '<div class="statcounter">'
-        '</div>'
+'''
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9J3F87PEF5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9J3F87PEF5');
+</script>
+'''
     )
 
     components.html(html)
