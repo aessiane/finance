@@ -55,3 +55,5 @@ def analytics_html():
     )
 
     components.html(html)
+
+    st.markdown('![image](https://www.google-analytics.com/collect?v=2&tid=G-9J3F87PEF5&cid=555&t=event&en=eventName)')
